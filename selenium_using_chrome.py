@@ -8,10 +8,11 @@ from pprint import pprint
 import time
 
 
+class GoogleSearchRpa
 
 pesquisa_google = []
 
-#Ler Arquivo
+#read file
 
 def pega_dados(obj):
     instancia = meuprograma.google-me(
@@ -31,17 +32,16 @@ except Exception as erro:
     
     print("\n",pesquisa_google)
 
-#Pesquisa no Navegador
+#search keywords in browser
     
-
 driver = webdriver.Chrome()
 for acessar in pesquisa_google:
     driver.get('http://www.google.com.br')
     driver.find_element_by_name('q').send_keys(acessar,)
     driver.find_element_by_name('btnK').send_keys(Keys.ENTER)
     
-   # print("\n",acessar)
-    #driver.close()
+    print("\n",acessar)
+    driver.close()
 
 
 
