@@ -8,9 +8,9 @@ from pprint import pprint
 import time
 
 
-class GoogleSearchRpa
+class GoogleSearchRpa:
 
-pesquisa_google = []
+    pesquisa_google = []
 
 #read file
 
@@ -35,13 +35,15 @@ except Exception as erro:
 #search keywords in browser
     
 driver = webdriver.Chrome()
+print("\n",'###############print keywords file output.json################')
 for acessar in pesquisa_google:
     driver.get('http://www.google.com.br')
     driver.find_element_by_name('q').send_keys(acessar,)
     driver.find_element_by_name('btnK').send_keys(Keys.ENTER)
+
     
     print("\n",acessar)
-    driver.close()
+    #driver.close()
 
 
 
